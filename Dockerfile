@@ -2,8 +2,9 @@ FROM openjdk:17
 
 WORKDIR /devopAutomation
 
-COPY .mvn/ ./
-COPY mvnw pom.xml ./
+COPY ./.mvn ./.mvn
+COPY ./mvnw ./
+COPY ./pom.xml ./
 
 RUN ./mvnw dependency:resolve
 
