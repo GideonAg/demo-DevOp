@@ -20,4 +20,4 @@ FROM adoptopenjdk/openjdk11:alpine-slim
 COPY --from=builder /app/target/helloworld-*.war/helloworld.war
 
 # Run the web service on container startup.
-CMD ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/helloworld.war"
+CMD ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/helloworld.war"]
